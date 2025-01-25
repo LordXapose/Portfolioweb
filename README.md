@@ -6,4 +6,4 @@ Real-time password strength analysis: Evaluates passwords based on length, compl
 Graphical feedback: Visual representation of password strength through interactive graphs.
 Reactive UI: Instant updates as the user types, providing immediate strength suggestions.
 Strong password suggestions: Offers actionable suggestions for creating more secure passwords, such as adding more characters, varying character types, and avoiding common patterns.
-webpage is live at https://kenilop.github.io/-Advance-Password-Strength-checker-/
+webpage is live at https://lordxapose.github.io/-Advance-Password-Strength-checker-/
