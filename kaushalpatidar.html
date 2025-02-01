@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaushal Patidar - Cyber Security Engineer</title>
+  
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS CSS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D4ED8',
+            secondary: '#0EA5E9',
+            accent: '#F59E0B',
+          },
+          backgroundImage: {
+            'hero-pattern': "url('https://source.unsplash.com/1600x900/?cyber,security')",
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+          },
+          animation: {
+            fadeIn: 'fadeIn 1s ease-in forwards',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    #back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: #1D4ED8;
+      color: #fff;
+      padding: 0.75rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+      display: none;
+    }
+    #back-to-top:hover {
+      background-color: #0EA5E9;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+  <!-- Sticky Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-md">
+    <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+      <div class="text-2xl font-bold text-primary dark:text-white">KAUSHAL PATIDAR</div>
+      <div class="flex items-center space-x-6">
+        <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary transition">About</a>
+        <a href="#experience" class="text-gray-700 dark:text-gray-300 hover:text-primary transition">Experience</a>
+        <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:text-primary transition">Projects</a>
+        <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:text-primary transition">Skills</a>
+        <a href="#tools" class="text-gray-700 dark:text-gray-300 hover:text-primary transition">Tools</a>
+        <a href="#education" class="text-gray-700 dark:text-gray-300 hover:text-primary transition">Education</a>
+        <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:text-primary transition">Contact</a>
+        <!-- Dark Mode Toggle Button -->
+        <button id="theme-toggle" class="bg-secondary dark:bg-accent p-2 rounded-full focus:outline-none">
+          <svg id="theme-toggle-dark-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M17.293 13.293a8 8 0 11-10.586-10.586 7 7 0 1010.586 10.586z"></path>
+          </svg>
+          <svg id="theme-toggle-light-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 2.47a1 1 0 011.42 1.42l-.71.71a1 1 0 01-1.42-1.42l.71-.71zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zm-2.47 4.22a1 1 0 011.42 1.42l-.71.71a1 1 0 11-1.42-1.42l.71-.71zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-2.47a1 1 0 00-1.42 1.42l.71.71a1 1 0 001.42-1.42l-.71-.71zM4 9a1 1 0 100 2H3a1 1 0 100-2h1zm2.47-4.22a1 1 0 00-1.42-1.42l-.71.71a1 1 0 001.42 1.42l.71-.71z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="h-screen bg-hero-pattern bg-cover bg-center relative flex items-center justify-center" style="background-blend-mode: overlay; background-color: rgba(0,0,0,0.5);" data-aos="fade-in">
+    <div class="text-center text-white px-4 animate-fadeIn">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">KAUSHAL PATIDAR</h1>
+      <p class="text-xl md:text-2xl font-medium mb-6 drop-shadow-lg">Cyber Security Engineer</p>
+      <p class="max-w-2xl mx-auto">
+        Cybersecurity professional and final-year student specializing in Cyber Security and Digital Forensics at Parul University. Ranked in the top 5% globally on TryHackMe, with expertise in threat detection, incident response, and risk management.
+      </p>
+      <div class="mt-8">
+        <a href="#about" class="px-8 py-3 bg-primary text-white rounded-full shadow-lg hover:bg-secondary transition">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-6 pt-20 pb-12">
+    <!-- About Section with Photo -->
+    <section id="about" class="mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">About Me</h2>
+      </div>
+      <div class="flex flex-col md:flex-row items-center max-w-4xl mx-auto">
+        <!-- Profile Photo (Replace placeholder URL with your direct image URL) -->
+        <div class="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOvhTGwDkmRLtOmrGk4z8NtjU5sh8BgIljPQ&s    " alt="Kaushal Pat Idar Photo" class="w-48 h-48 rounded-full object-cover shadow-xl">
+        </div>
+        <!-- Intro Text -->
+        <div class="text-lg leading-relaxed">
+          <p class="mb-4">
+            I am a cybersecurity professional and final-year student specializing in Cyber Security and Digital Forensics at Parul University. I have been ranked in the top 5% globally on TryHackMe, and I possess expertise in threat detection, incident response, and risk management. I am proficient in using tools such as Splunk, Nessus, and Burp Suite, and I have experience working with frameworks including NIST CSF and MITRE ATT&CK.
+          </p>
+          <p>
+            I excel in developing security solutions, conducting vulnerability assessments, and leading cybersecurity initiatives. My passion for cybersecurity drives me to continuously learn and evolve in this dynamic field.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strengths & Expertise Section -->
+    <section id="expertise" class="mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Strengths & Expertise</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <ul class="list-disc list-inside space-y-2 text-lg">
+          <li>Threat Detection & Mitigation</li>
+          <li>Advanced Threat Intelligence</li>
+          <li>Incident Response</li>
+          <li>Security Architecture</li>
+          <li>Computer Networks</li>
+          <li>Access Control & Identity Management</li>
+          <li>Endpoint Security & EDR Tools</li>
+          <li>Vulnerability Management</li>
+        </ul>
+        <ul class="list-disc list-inside space-y-2 text-lg">
+          <li>Cloud Security</li>
+          <li>Penetration Testing</li>
+          <li>Security Testing & Auditing</li>
+          <li>SIEM Tools</li>
+          <li>Security Automation</li>
+          <li>Data Loss Prevention (DLP)</li>
+          <li>Risk Management</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills Section with All Items -->
+    <section id="skills" class="mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Skills</h2>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <!-- Each skill below: update percentages as needed -->
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Threat Detection & Mitigation</span>
+            <span class="text-lg font-medium">70%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-primary h-4 rounded-full transition-all duration-1000" style="width: 70%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Advanced Threat Intelligence</span>
+            <span class="text-lg font-medium">85%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-secondary h-4 rounded-full transition-all duration-1000" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Incident Response</span>
+            <span class="text-lg font-medium">80%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-accent h-4 rounded-full transition-all duration-1000" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Security Architecture</span>
+            <span class="text-lg font-medium">80%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-primary h-4 rounded-full transition-all duration-1000" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Computer Networks</span>
+            <span class="text-lg font-medium">95%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-secondary h-4 rounded-full transition-all duration-1000" style="width: 95%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Access Control & Identity Management</span>
+            <span class="text-lg font-medium">80%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-accent h-4 rounded-full transition-all duration-1000" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Endpoint Security & EDR Tools</span>
+            <span class="text-lg font-medium">80%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-primary h-4 rounded-full transition-all duration-1000" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Vulnerability Management</span>
+            <span class="text-lg font-medium">95%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-secondary h-4 rounded-full transition-all duration-1000" style="width: 95%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Cloud Security</span>
+            <span class="text-lg font-medium">75%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-accent h-4 rounded-full transition-all duration-1000" style="width: 75%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Penetration Testing</span>
+            <span class="text-lg font-medium">90%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-primary h-4 rounded-full transition-all duration-1000" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Security Testing & Auditing</span>
+            <span class="text-lg font-medium">90%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-secondary h-4 rounded-full transition-all duration-1000" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">SIEM Tools</span>
+            <span class="text-lg font-medium">85%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-accent h-4 rounded-full transition-all duration-1000" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Security Automation</span>
+            <span class="text-lg font-medium">70%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-primary h-4 rounded-full transition-all duration-1000" style="width: 70%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Data Loss Prevention (DLP)</span>
+            <span class="text-lg font-medium">75%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-secondary h-4 rounded-full transition-all duration-1000" style="width: 75%;"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-lg font-medium">Risk Management</span>
+            <span class="text-lg font-medium">80%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+            <div class="bg-accent h-4 rounded-full transition-all duration-1000" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Professional Experience</h2>
+      </div>
+      <div class="space-y-12">
+        <!-- Prodigy Infotech -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold text-secondary">MAAMO TECHNOLABS  </h3>
+          <p class="italic text-gray-600 dark:text-gray-300">Cyber Security Intern &mdash; Dec 2024 to April 2025 </p>
+          <p class="mt-4">
+             I was specialized in red teaming, developing automated tools for vulnerability assessment and threat detection. I designed secure system architectures, implemented security protocols for web applications and networks, and created scripts for intrusion detection and log analysis. Additionally, I built AI-based solutions for malware design to enhance offensive security strategies.          
+              <li>Developed tools for automated vulnerability assessment and threat detection.</li>
+            <li>•Designed secure system architectures to mitigate cyber risks. </li>
+            <li>•Built scripts for intrusion detection and log analysis. </li>
+            <li>Supported the cybersecurity team as needed.</li>
+          </ul>
+        </div>
+        <!-- Parul University -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+            <h3 class="text-2xl font-bold text-secondary">PRODIGY INFOTECH</h3>
+            <p class="italic text-gray-600 dark:text-gray-300">Cyber Security Intern &mdash; Jun 2024 (1 month)</p>
+            <p class="mt-4">
+              Conducted security assessments and audits to evaluate system vulnerabilities and compliance. Assisted in developing and documenting security policies to strengthen the organizational security posture. Collaborated on cybersecurity projects and initiatives. Provided general support to the cybersecurity team.
+            </p>
+            <ul class="list-disc list-inside mt-4 space-y-1">
+              <li>Participated in security assessments and audits of systems.</li>
+              <li>Assisted in developing security policies and documentation.</li>
+              <li>Collaborated on cybersecurity projects and initiatives.</li>
+              <li>Supported the cybersecurity team as needed.</li>
+            </ul>
+          </div>
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+            <h3 class="text-2xl font-bold text-secondary">PARUL UNIVERSITY</h3>
+            <p class="italic text-gray-600 dark:text-gray-300">Admission Assistant Intern &mdash; May 2023 to Sept 2024 (5 months)</p>
+            <p class="mt-4">
+              Reviewed applications for accuracy and completeness to ensure a seamless admissions process. Conducted campus tours, participated in recruitment events, and maintained accurate records and databases to support admissions activities.
+            </p>
+            <ul class="list-disc list-inside mt-4 space-y-1">
+              <li>Processed and reviewed applications for accuracy.</li>
+              <li>Conducted campus tours and recruitment events.</li>
+              <li>Maintained accurate records and admissions databases.</li>
+            </ul>
+          </div>
+          <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+            <h3 class="text-2xl font-bold text-secondary">IMMUNEFI</h3>
+            <p class="italic text-gray-600 dark:text-gray-300">SMART CONTRACT SECURITY REASERCHER &mdash; MAY 2022 to PRESENT  </p>
+            <p class="mt-4">
+                As a independent Security Researcher I was mainly working with Web 3 Security testing including            </p>
+            <ul class="list-disc list-inside mt-4 space-y-1">
+              <li>Audited and tested smart contracts on Ethereum and Binance Smart Chain.</li>
+              <li>•Identified vulnerabilities including OWASP Top 10 and Web3-specific issues like re-entrancy and integer overflows.</li>
+              <li>Utilized tools like MythX, Slither, Remix IDE, and manual code reviews.</li>
+              <li>Developed proof-of-concept (PoC) exploits to simulate real-world attacks</li>
+
+            </ul>
+          </div>
+      
+        </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Projects</h2>
+      </div>
+      <div class="space-y-12">
+        <!-- Cyber Security Projects -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold text-secondary">Cyber Security Based Projects</h3>
+          <ul class="list-disc list-inside mt-4 space-y-1 text-lg">
+            <li><strong>Password Strength Checker:</strong> A tool to evaluate password security and suggest enhancements.</li>
+            <li><strong>Vulnerability Scanner:</strong> Tools to identify vulnerabilities in a network setup.</li>
+            <li><strong>Secure File Storage System:</strong> Developed an application to encrypt and decrypt files securely.</li>
+            <li><strong>Domain & Subdomain Finder:</strong> Script to enumerate domains and subdomains for a target.</li>
+            <li><strong>XSS Scanner:</strong> Scans websites for XSS vulnerabilities.</li>
+            <li><strong>Port Scanner:</strong> Python-based tool to scan open ports on a target system.</li>
+            <li><strong>Web Exploits:</strong> Scripts and Exploits for vulnerable applications .</li>
+            <li><strong>Malwares :</strong> Diffrent types of malwares for testing purposes </li>
+            <li><strong>Malware Analysis snadbox </strong> Dedicated Enviroment for malware Testing .</li>
+
+          </ul>
+        </div>
+        <!-- Machine Learning Projects -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold text-secondary">Machine Learning Based Projects</h3>
+          <ul class="list-disc list-inside mt-4 space-y-1 text-lg">
+            <li><strong>Malware Detection Model</strong></li>
+            <li><strong>Spam Email Detection Model</strong></li>
+            <li><strong>Fraud Detection Model</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools & Frameworks Section -->
+    <section id="tools" class="mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Tools & Frameworks</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Tools -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold text-secondary mb-4">Tools</h3>
+          <ul class="list-disc list-inside space-y-1 text-lg">
+            <li>EDR Tools - CrowdStrike</li>
+            <li>Virtualization & Container Security - Kubernetes sec tools</li>
+            <li>Security Testing & Auditing - Nessus, Qualys</li>
+            <li>SIEM Tools - Splunk</li>
+            <li>Security Automation - Python</li>
+            <li>Penetration Testing - Kali Linux tools</li>
+            <li>Cloud Security Tools - Google Cloud Armor</li>
+            <li>Log Analysis & Monitoring - Graylog</li>
+            <li>Identity & Access Management - Microsoft AD</li>
+            <li>Vulnerability Assessment - Nessus, OpenVAS, Qualys</li>
+            <li>Network Security Tools - (IDS/IPS) Suricata</li>
+            <li>Web Security - Burp Suite, Zap Proxy</li>
+          </ul>
+        </div>
+        <!-- Frameworks -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold text-secondary mb-4">Frameworks</h3>
+          <ul class="list-disc list-inside space-y-1 text-lg">
+            <li>Cybersecurity Frameworks - NIST CSF, ISO/IEC 27001, COBIT</li>
+            <li>Incident Response Frameworks - NIST SP 800-61, SANS Incident Response</li>
+            <li>Threat Intelligence - MITRE ATT&CK, Diamond Model</li>
+            <li>Risk Management Frameworks - NIST RMF, FAIR</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Education</h2>
+      </div>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 max-w-3xl mx-auto hover:shadow-2xl transition">
+        <h3 class="text-2xl font-bold text-secondary">PARUL UNIVERSITY</h3>
+        <p class="mt-2 font-semibold text-lg">Bachelor's in Computer Application with Specialization in Cyber Security and Forensics</p>
+        <p class="mt-1 text-gray-700 dark:text-gray-300">Grade: 8.20 SGPA (as per the last semester)</p>
+        <p class="mt-4 text-lg">
+          Led cybersecurity awareness campaigns and organized workshops on ethical hacking and network security. Developed a Network Security Monitoring Tool and collaborated on projects such as Machine Learning for Malware Detection. As Head of the Cyber Security Club, organized events and guest lectures while gaining hands-on experience with various security tools.
+        </p>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Certifications</h2>
+      </div>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 max-w-3xl mx-auto hover:shadow-2xl transition">
+        <ul class="list-disc list-inside space-y-1 text-lg">
+          <li>SECURITY+ by CompTIA</li>
+          <li>EHE - Ethical Hacking Essential (EC Council)</li>
+          <li>NDE - Network Defence Essential (EC Council)</li>
+          <li>DFE - Digital Forensics Essential (EC Council)</li>
+          <li>Project Management 101 - Simple Learn</li>
+          <li>Agile Project Management - HP Foundation</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Extra Curriculars & Achievements Section -->
+    <section id="contact" class="mb-16" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Extra Curriculars & Achievements</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Extra Curriculars -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold text-secondary mb-4">Extra Curriculars</h3>
+          <ul class="list-disc list-inside space-y-1 text-lg">
+            <li><strong>NCC Cadet (June 2022 - Present):</strong> Developed leadership, discipline, and a strong sense of duty.</li>
+            <li><strong>MP of Parliament NYEP (Dec 2023 - Feb 2024):</strong> Advocated for environmental stewardship and sustainability with insights from Mr. Nitin Gadkari.</li>
+            <li><strong>Computer Tutor (Dec 2023 - Feb 2024):</strong> Mentored peers in cybersecurity concepts.</li>
+          </ul>
+        </div>
+        <!-- Achievements -->
+        <div class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold text-secondary mb-4">Achievements</h3>
+          <ul class="list-disc list-inside space-y-1 text-lg">
+            <li>Top 8% ranking globally on TryHackMe</li>
+            <li>NIC Debate Champion 2023</li>
+            <li>Best Anchor Award at NCC Leadership Academy Rajpipla</li>
+            <li>Debate Masters Champion 2023 at Faculty of IT and Computer Science Department</li>
+            <li>Best Teacher Award on Teachers Day at Faculty of IT and Computer Science Department</li>
+            <li>Debate Champion 2022 at Faculty of IT and Computer Science Department</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Social Links Section -->
+    <section id="social" class="mb-16" data-aos="fade-up">
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Connect with Me</h2>
+        </div>
+        <div class="flex flex-col items-center space-y-4">
+          <p class="text-lg">Email: <span class="font-medium">kenilpatidar19@gmail.com</span></p>
+          <div class="flex space-x-6 mt-4">
+            <a href="https://github.com/LordXapose" target="_blank" class="text-primary text-2xl hover:text-secondary transition">
+              <i class="fab fa-github"></i> <span class="sr-only">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/kaushal-patidar-7ab95b235/" target="_blank" class="text-primary text-2xl hover:text-secondary transition">
+              <i class="fab fa-linkedin"></i> <span class="sr-only">LinkedIn</span>
+            </a>
+            <a href="https://tryhackme.com/p/XAPOSE" target="_blank" class="text-primary text-2xl hover:text-secondary transition">
+              <i class="fas fa-shield-alt"></i> <span class="sr-only">TryHackMe</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="text-center mb-8">
+          <h2 class="text-4xl font-bold text-primary border-b-4 border-accent inline-block pb-2">Contact Me</h2>
+        </div>
+        <form action="kenilpatidar19@gmail.com" method="post" enctype="text/plain" class="flex flex-col items-center space-y-4">
+          <input type="text" name="name" placeholder="Your Name" class="p-2 border rounded" required>
+          <input type="email" name="email" placeholder="Your Email" class="p-2 border rounded" required>
+          <textarea name="message" placeholder="Your Message" class="p-2 border rounded" required></textarea>
+          <button type="submit" class="text-white bg-primary px-6 py-2 rounded">Send Message</button>
+        </form>
+      </section>
+      
+      <!-- Add Font Awesome CDN in your <head> section -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      
+
+  <!-- Back to Top Button -->
+  <div id="back-to-top" title="Back to Top">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M10 5a1 1 0 01.894.553l5 10a1 1 0 11-1.788.894L10 7.618 5.894 16.447a1 1 0 11-1.788-.894l5-10A1 1 0 0110 5z" clip-rule="evenodd"/>
+    </svg>
+  </div>
+
+  <!-- Footer -->
+  
+
+  <!-- AOS JS for scroll animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark' ||
+       (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      document.getElementById('theme-toggle-light-icon').classList.remove('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.getElementById('theme-toggle-dark-icon').classList.remove('hidden');
+    }
+
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      document.getElementById('theme-toggle-dark-icon').classList.toggle('hidden');
+      document.getElementById('theme-toggle-light-icon').classList.toggle('hidden');
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+
+  <!-- Back to Top Button Script -->
+  <script>
+    const backToTopBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <!-- Optionally include Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</body>
+</html>
