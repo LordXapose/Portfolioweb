@@ -2,7 +2,7 @@
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:141D2B,100:9FEF00&height=160&section=header" />
 
-# 🌐 Portfolio — Kaushal Patidar
+# 🌐 Portfolio Kaushal Patidar
 
 **A WebGL-powered creative portfolio with dual Security × Business personas**
 
@@ -146,14 +146,6 @@ Edit the data objects → save → refresh. No build step needed.
 - Touch devices get native cursors (no custom cursor overhead)
 - The headshot is embedded as base64 to keep it zero-dependency
 - Three.js loads from CDN with a static gradient fallback if blocked
-
----
-
-## 📜 License
-
-Built for personal use. The code structure and design are original work. The animal mascot SVGs are original illustrations. Third-party resources (Google Fonts, Three.js, shields.io) are used under their respective licenses.
-
----
 
 <div align="center">
 
