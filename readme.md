@@ -13,7 +13,7 @@
 
 <br />
 
-[**Live Demo →**](#) · [**LinkedIn →**](https://www.linkedin.com/in/kaushalpatidar-kenil4sec) · [**GitHub →**](https://github.com/LordXapose)
+[**Live Demo →**](#) · [**LinkedIn →**](https://www.linkedin.com/in/kaushal-patidar-kenil4sec/) · [**GitHub →**](https://github.com/LordXapose)
 
 </div>
 
